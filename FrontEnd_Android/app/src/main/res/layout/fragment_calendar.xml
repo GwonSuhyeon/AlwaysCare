@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/calendar_prev_month_button"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_baseline_keyboard_arrow_left_24"/>
+
+        <TextView
+            android:id="@+id/calendar_date_text"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="50sp"
+            android:gravity="center"
+            android:fontFamily="@font/gmarket_sans_ttf_bold"
+            android:textColor="@color/black"
+            android:text="2023년 7월"/>
+
+        <ImageButton
+            android:id="@+id/calendar_next_month_button"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/gmarket_sans_ttf_bold"
+            android:textColor="#000000"
+            android:text="MON"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/gmarket_sans_ttf_bold"
+            android:textColor="#000000"
+            android:text="TUE"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/gmarket_sans_ttf_bold"
+            android:textColor="#000000"
+            android:text="WED"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/gmarket_sans_ttf_bold"
+            android:textColor="#000000"
+            android:text="THU"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/gmarket_sans_ttf_bold"
+            android:textColor="#000000"
+            android:text="FRI"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/gmarket_sans_ttf_bold"
+            android:textColor="#50bcdf"
+            android:text="SAT"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/gmarket_sans_ttf_bold"
+            android:textColor="#FF0000"
+            android:text="SUN"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/custom_calendar_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_setting"
+        android:padding="20dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarket_sans_ttf_bold"
+            android:text="건강 일지"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/calendar_diary_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarket_sans_ttf_medium"
+            android:textSize="15sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:text="다이어리 내용"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_setting"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="10dp">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarket_sans_ttf_bold"
+            android:text="진단 정보"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/calendar_diagnosis_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarket_sans_ttf_medium"
+            android:textSize="15sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:text="진단 내용"/>
+
+        <TextView
+            android:id="@+id/calendar_disease_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarket_sans_ttf_medium"
+            android:textSize="15sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:text="진단 내용"/>
+    </LinearLayout>
+
+</LinearLayout>

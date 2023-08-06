@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_bottom_setting"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/petinfo_list_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ic_baseline_menu_24"
+                android:layout_gravity="end"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/petinfo_pet_image"
+                    android:scaleType="centerCrop"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@android:color/transparent"
+                    app:civ_border_overlay="true"
+                    app:civ_border_width="2dp"
+                    app:civ_border_color="#000000" />
+
+
+                <TextView
+                    android:id="@+id/petinfo_name_text"
+                    android:layout_marginTop="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_toRightOf="@id/petinfo_pet_image"
+                    android:text="이름 : "
+                    android:textSize="15sp"
+                    android:fontFamily="@font/gmarket_sans_ttf_medium"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/petinfo_age_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:layout_toRightOf="@id/petinfo_pet_image"
+                    android:layout_below="@id/petinfo_name_text"
+                    android:text="나이 : "
+                    android:fontFamily="@font/gmarket_sans_ttf_medium"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/petinfo_species_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"
+                    android:layout_toRightOf="@id/petinfo_pet_image"
+                    android:layout_below="@id/petinfo_age_text"
+                    android:text="종 : "
+                    android:fontFamily="@font/gmarket_sans_ttf_medium"
+                    android:textColor="@color/black"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pet_info_list_today"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gmarket_sans_ttf_medium"
+            android:textSize="20sp"
+            android:text="test"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"/>
+
+        <RelativeLayout
+            android:id="@+id/petinfo_today_diagnosis_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/round_setting">
+
+            <TextView
+                android:id="@+id/petinfo_diagnosis_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="진단 내용"
+                android:padding="12dp"
+                android:fontFamily="@font/gmarket_sans_ttf_bold"
+                android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/petinfo_today_diagnosis_button"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_below="@id/petinfo_diagnosis_title"
+                android:layout_marginTop="30dp"
+                android:text="오늘의 건강상태 체크하기"
+                android:background="@drawable/round_setting"/>
+
+            <ImageButton
+                android:id="@+id/petinfo_edit_diagnosis_imagebutton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_baseline_edit_24"
+                android:layout_alignParentEnd="true"
+                android:background="#00000000"
+                android:layout_gravity="end"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/petinfo_diagnosis_title"
+                android:layout_alignParentStart="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/petinfo_eye_diagnosis_contenxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gmarket_sans_ttf_medium"
+                    android:paddingHorizontal="20dp"
+                    android:layout_marginStart="10dp"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/petinfo_skin_diagnosis_contenxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/gmarket_sans_ttf_medium"
+                    android:paddingHorizontal="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/petinfo_today_diary_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/round_setting">
+            <TextView
+                android:id="@+id/petinfo_diary_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="건강 일지"
+                android:padding="12dp"
+                android:fontFamily="@font/gmarket_sans_ttf_bold"
+                android:textSize="20sp"/>
+
+            <ImageButton
+                android:id="@+id/petinfo_edit_diary_imagebutton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_baseline_edit_24"
+                android:layout_alignParentEnd="true"
+                android:background="#00000000"
+                android:layout_gravity="end"/>
+
+
+            <Button
+                android:id="@+id/petinfo_today_diary_button"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/petinfo_diary_title"
+                android:text="오늘의 다이어리 작성하기"
+                android:background="@drawable/round_setting"/>
+
+            <TextView
+                android:id="@+id/petinfo_diary_contenxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/gmarket_sans_ttf_medium"
+                android:text="다이어리 내용"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/petinfo_diary_title"
+                android:paddingHorizontal="20dp"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

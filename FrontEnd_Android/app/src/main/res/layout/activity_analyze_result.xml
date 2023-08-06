@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.AnalyzeResultActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="ALWAYS CARE"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#000000"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/check_disease_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"/>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/round_top_setting"
+        android:backgroundTint="#FFD400"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/analyze_result_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="'이름'은 현재\n'병명'일 확률이 높아요"
+            android:gravity="left"
+            android:fontFamily="@font/gmarket_sans_ttf_bold"
+            android:textSize="21sp"
+            android:lineSpacingExtra="10sp"/>
+
+        <TextView
+            android:id="@+id/analyze_result_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="설명"
+            android:lineSpacingExtra="5dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/gmarket_sans_ttf_medium"/>
+
+        <TextView
+            android:id="@+id/analyze_result_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40sp"
+            android:fontFamily="@font/gmarket_sans_ttf_bold"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="end"
+            android:text="72%"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_weight="1"
+                android:id="@+id/analyze_result_search_nearby_hospital_button"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_setting"
+                android:text="가까운 병원 찾기"/>
+
+            <Button
+                android:id="@+id/analyze_result_save"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="5dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_setting"
+                android:text="검사 결과 저장"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

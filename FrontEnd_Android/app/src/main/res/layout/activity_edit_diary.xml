@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.EditDiaryActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="ALWAYS CARE"
+        android:textStyle="bold"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#000000"/>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/round_setting"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/edit_diary_date_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            android:layout_margin="20dp"
+            android:textSize="30sp"
+            android:text="2023-06-23"/>
+
+        <EditText
+            android:id="@+id/edit_diary_edittext"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="top"
+            android:padding="10dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="100dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/edit_diary_save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:layout_margin="20dp"
+        android:background="@drawable/round_setting"/>
+</LinearLayout>

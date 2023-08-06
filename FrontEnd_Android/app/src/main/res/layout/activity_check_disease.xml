@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.CheckDiseaseActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/check_disease_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="100dp"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/round_top_setting"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="50dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/gmarket_sans_ttf_medium"
+            android:text="사진 분석중입니다. 잠시만 기다려주세요"
+            android:gravity="center"/>
+
+        <ProgressBar
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminateTint="@color/black"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+</LinearLayout>
